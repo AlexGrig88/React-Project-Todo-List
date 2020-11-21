@@ -5,7 +5,7 @@
 
 1. User can edit a to-do  
 2. By pressing enter (or a button), the User can submit the to-do item and can see that being added to a list of to-do's  
-3. User can mark a to-do as completed  
+3. User can mark a to-do as completed (click on record) 
 4. User can remove a to-do item by pressing on a button 
 5. User can see a list with all the completed to-do's  
 6. User can see a list with all the active to-do's  

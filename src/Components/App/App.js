@@ -13,8 +13,8 @@ import About from '../Pages/About';
 
 import './App.css';
 
-// Мы не делаем запросов на бэкенд для создания туду айтема в данном примере,
-// поэтому создаем локальный туду айтем со случайным id. В реальном приложении, мы возможно бы захотели создавать их на стороне сервера.
+// Мы не делаем post-запросов на бэкенд для создания todoItem в данном примере,
+// поэтому создаем локальный todoItem со случайным id.
 function createTodoItem(task) {
   return {
     id: uuidv4(),
@@ -26,13 +26,13 @@ function createTodoItem(task) {
 class App extends Component {
 
   componentDidMount() {
-    // проверить, есть ли туду в локальном хранилище
+    // проверить, есть ли todos в локальном хранилище
     const todoData = localStorage.getItem("todos");
     if (todoData) {
       this.setState({ todoData: JSON.parse(todoData) });
       return;
     }
-    // взять туду из "сервера"
+    // если данные ещё отсутствуют в локальном хранилище фэтчим их с сервера
     axios.get("https://jsonplaceholder.typicode.com/todos?_limit=7")
       .then(response => {
         const arrNewData = response.data.map((item) => {
@@ -47,6 +47,7 @@ class App extends Component {
   }
 
   componentDidUpdate(_prevProps, prevState) {
+    //если состояние нашего state изменилось, сохраняем новые данные в локальном хранилище
     if (this.state.todoData !== prevState.todoData) {
       localStorage.setItem("todos", JSON.stringify(this.state.todoData));
     }

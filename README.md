@@ -9,3 +9,4 @@
 4. User can remove a to-do item by pressing on a button 
 5. User can see a list with all the completed to-do's  
 6. User can see a list with all the active to-do's  
+7. When closing the browser window the to-do's will be stored and when the User returns, the data will be retrieved  

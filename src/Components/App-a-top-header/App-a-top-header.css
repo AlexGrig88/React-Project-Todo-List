@@ -1,0 +1,87 @@
+
+nav {
+    font-family: 'PT Serif', serif;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+  }
+  #checkbox_menu, .toggle {
+    display: none;
+  }
+  .menu {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+  }
+   .menu li.a {
+    align-self: center;
+    font-size: 15px;
+    padding: 10px 15px;
+    transition: background .2s linear;
+    
+  }
+  .menu li.a:hover {
+    background-color: rgb(124, 201, 214);
+    border-radius: 4px;
+  }
+  
+  .menu li.a.logo {
+    font-size: 30px;
+    margin-right: 200px;
+  }
+  
+  @media screen and (max-width: 765px) {
+    .toggle {
+        clear: both;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+        width: 100%;
+        color: #000;
+        background: rgb(29, 110, 126);
+        transition: all .1s linear;
+    }
+    .toggle:hover {
+        background: rgb(85, 179, 196);
+    }
+    #checkbox_menu:checked + label .touch {
+        height: 350px;
+    }
+    #checkbox_menu:checked + label .touch li {
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0;
+        transition: height .3s linear;
+    }
+    .menu li {
+        display: flex;
+        align-self: center;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu li.a {
+        width: 95%;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+    }
+    .menu li.a.logo {
+        font-size: 25px;
+        margin-right: 0;
+    }
+  }
+  

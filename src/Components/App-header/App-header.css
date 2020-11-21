@@ -1,0 +1,18 @@
+
+.title-app {
+  margin-top: 30px;
+}
+.app-header {
+  align-items: flex-end;
+}
+
+.app-header h3 {
+  font-size: 1.2rem;
+  color: rgb(94, 91, 91);
+  
+}
+.app-header h4 {
+  padding-left: 10px;
+  font-size: 1.2rem;
+  color: rgb(3, 19, 233);
+}
